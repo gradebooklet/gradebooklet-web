@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "features": "Features",
+    "download": "Download",
+    "comingSoon": "Coming Soon!"
+  },
+  "download": {
+    "entry": "This is",
+    "subheader": "a simple, easy-to-use, grade management app."
+  },
+  "features": {
+    "first": {
+      "header": "Plenty of features:",
+      "first": "Secured grade storage.",
+      "second": "Calculated average for each subject.",
+      "third": "Perform better. With",
+      "thirdSecondPart": " supporting you!"
+    },
+    "second": {
+      "header": "Simple design",
+      "first": "Easy to use.",
+      "second": "Darkmode. Reflects device.",
+      "third": "Minimalistic. Less offers more."
+    },
+    "third": {
+      "header": "Proven settings",
+      "first": "Export as PDF.",
+      "second": "Different languages.",
+      "third": "Data is stored encrypted."
+    }
+  },
+  "comingSoon": {
+    "header": "There is more coming!",
+    "subheader": "Released with 2021 summer update",
+    "content": {
+      "first": "Alter already saved exams.",
+      "second": " accounts.",
+      "third": "Multi-Device support with cloud storage."
+    },
+    "footer": "Download ",
+    "footerSecondPart": " now and enjoy those new features soon!"
+  },
+  "footer": {
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy"
+  }
+}

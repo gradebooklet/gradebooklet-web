@@ -1,0 +1,279 @@
+<template>
+  <require from="app.css"></require>
+  <require from="hamburgers.css"></require>
+
+  <nav>
+    <img src="/gradebooklet.svg" class="logo" alt="gradebooklet logo"/>
+
+    <!--    Desktop Menu-->
+    <div class="tabs">
+      <button click.trigger="navClicked()" id="hamburger-button" class="hamburger" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+      </button>
+      <ul class="main-nav">
+        <li class="nav-item" mousemove.trigger="handleIndicator($event.target)" click.trigger="goToClickedSlide(0)"
+            t="nav.download"></li>
+        <li class="nav-item" mousemove.trigger="handleIndicator($event.target)" click.trigger="goToClickedSlide(1)"
+            t="nav.features"></li>
+        <li class="nav-item" mousemove.trigger="handleIndicator($event.target)" click.trigger="goToClickedSlide(2)"
+            t="nav.comingSoon"></li>
+      </ul>
+      <div class="indicator"></div>
+    </div>
+  </nav>
+
+  <div id="terms-modal" class="modal">
+    <div class="modal-wrapper">
+      <div class="modal-header">
+        <h1 class="modal-title" t="footer.terms"></h1>
+        <div class="modal-close" click.trigger="closeModal('terms')">
+          <span class="fas fa-times"></span>
+        </div>
+      </div>
+      <div class="modal-content">
+        <h2>Introduction</h2>
+        These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, gradebooklet-app accessible at www.gradebooklet-app-com.
+        <br>
+        <br>
+        These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.
+        Minors or people below 12 years old are not allowed to use this Website.
+        <h2>Intellectual Property Rights</h2>
+        Other than the content you own, under these Terms, gradebooklet and/or its licensors own all the intellectual property rights and materials contained in this Website.
+        <br>
+        <br>
+        You are granted limited license only for purposes of viewing the material contained on this Website.
+        <h2>Restrictions</h2>
+        You are specifically restricted from all of the following:
+        <br>
+        <ul>
+          <li>publishing any Website material in any other media;</li>
+          <li>selling, sublicensing and/or otherwise commercializing any Website material;</li>
+          <li>publicly performing and/or showing any Website material;</li>
+          <li>using this Website in any way that is or may be damaging to this Website;</li>
+          <li>using this Website in any way that impacts user access to this Website;</li>
+          <li>using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</li>
+          <li>engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</li>
+          <li>using this Website to engage in any advertising or marketing.</li>
+        </ul>
+        Certain areas of this Website are restricted from being access by you and gradebooklet may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this Website are confidential and you must maintain confidentiality as well.
+        <h2>Your Content</h2>
+        In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant gradebooklet a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.
+        <br>
+        <br>
+        Your Content must be your own and must not be invading any third-party's rights. gradebooklet reserves the right to remove any of Your Content from this Website at any time without notice.
+        <h2>No warranties</h2>
+        This Website is provided “as is,” with all faults, and gradebooklet express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.
+        <h2>Limitation of liability</h2>
+        In no event shall gradebooklet, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  gradebooklet, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.
+        <h2>Indemnification</h2>
+        <strong>
+          You hereby indemnify to the fullest extent gradebooklet from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.
+        </strong>
+        <h2>Severability</h2>
+        If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.
+        <h2>Variation of Terms</h2>
+        gradebooklet is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.
+        <h2>Assignment</h2>
+        The gradebooklet is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.
+        <h2>Entire Agreement</h2>
+        These Terms constitute the entire agreement between gradebooklet and you in relation to your use of this Website, and supersede all prior agreements and understandings.
+        <h2>Governing Law & Jurisdiction</h2>
+        These Terms will be governed by and interpreted in accordance with the laws of Switzerland, and you submit to the non-exclusive jurisdiction of the state and federal courts located in Switzerland for the resolution of any disputes.
+      </div>
+    </div>
+  </div>
+
+  <div id="privacy-modal" class="modal">
+    <div class="modal-wrapper">
+      <div class="modal-header">
+        <h1 class="modal-title" t="footer.privacy"></h1>
+        <div class="modal-close" click.trigger="closeModal('privacy')">
+          <span class="fas fa-times"></span>
+        </div>
+      </div>
+      <div class="modal-content">
+        This privacy policy will explain how gradebooklet uses the personal data we collect from you when you use our website.
+
+        <h2>Collected data</h2>
+        <strong>gradebooklet doesn't directly collect any data.</strong> It is possible that data get's collected by Google Analytics, further information found <a href="https://policies.google.com/privacy?hl=en-US">here</a>.
+        <h2>Contact</h2>
+        Write an  <strong><a href="mailto:service@gradebooklet-app.com">Email</a></strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="content swiper" keydown.delegate="handleKeyInput($event)">
+    <div class="swiper-wrapper">
+      <div id="home" class="swiper-slide">
+        <div class="swiper-content">
+          <div class="entry-content-wrapper feature-text">
+            <div class="content-left">
+              <h1 t="download.entry"></h1>
+              <span class="main-badge">gradebooklet</span>
+              <br/>
+              <small t="download.subheader"></small>
+
+              <div class="download-buttons-wrapper">
+                <div class="download-button">
+                  <a href="https://apps.apple.com/ch/app/gradebooklet/id1519216147" target="_blank"><span
+                          class="fab fa-apple"></span><span class="download-button-label">APP STORE</span></a>
+                </div>
+                <div class="download-button">
+                  <a href="https://play.google.com/store/apps/details?id=ch.lucabruegger.gradebooklet"
+                     target="_blank"><span class="fab fa-google-play"></span><span class="download-button-label">PLAY STORE</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="content-right">
+              <img class="preview" src="/mockups/splash_mockup.png" alt="iPhone Splash Mockup"/>
+            </div>
+          </div>
+
+          <svg class="arrows" click.trigger="goToClickedSlide(1)">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+        </div>
+      </div>
+      <div id="home" class="swiper-slide">
+        <div class="swiper-content">
+          <div class="horizontal-swiper-wrapper">
+            <div class="swiper-container feature-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+                    <div class="mr">
+                      <img class="preview" src="/mockups/subject_mockup.png"
+                           alt="iPhone Splash Mockup"/>
+                    </div>
+
+                    <div class="mockup-description">
+                      <div class="feature-text">
+                        <h1 t="features.first.header"></h1>
+                        <ul role="list" class="feature-list">
+                          <li data-icon="📲">
+                            <p t="features.first.first"></p>
+                          </li>
+                          <li data-icon="⌨️">
+                            <p t="features.first.second"></p>
+                          </li>
+                          <li data-icon="🚀">
+                            <p>
+                              <span t="features.first.third"></span> <span class="pacifico">gradebooklet</span><span
+                                    t="features.first.thirdSecondPart"></span></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+                    <div class="mockup-description mr">
+                      <div class="feature-text">
+                        <h1 t="features.second.header"></h1>
+                        <ul role="list" class="feature-list">
+                          <li data-icon="🧸">
+                            <p t="features.second.first"></p>
+                          </li>
+                          <li data-icon="🌚">
+                            <p t="features.second.second">
+                            <p>
+                          </li>
+                          <li data-icon="✅">
+                            <p t="features.second.third"></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="mr">
+                      <img class="preview" src="/mockups/darkmode_mockup.png"
+                           alt="iPhone Splash Mockup"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+                    <div class="mr">
+                      <img class="preview" src="/mockups/settings_mockup.png"
+                           alt="iPhone Splash Mockup"/>
+                    </div>
+
+                    <div class="mockup-description">
+                      <div class="feature-text">
+                        <h1 t="features.third.header"></h1>
+                        <ul role="list" class="feature-list">
+                          <li data-icon="📖">
+                            <p t="features.third.first"></p>
+                          </li>
+                          <li data-icon="⚙️">
+                            <p t="features.third.second"></p>
+                          </li>
+                          <li data-icon="🔐">
+                            <p t="features.third.third"></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-arrows">
+                <div click.trigger="prevFeature()">
+                  <i class="fas fa-long-arrow-alt-left swiper-arrow"></i>
+                </div>
+                <div click.trigger="nextFeature()">
+                  <i class="fas fa-long-arrow-alt-right swiper-arrow"></i>
+                </div>
+              </div>
+              <div class="feature-swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="home" class="swiper-slide">
+        <div class="swiper-content">
+          <div class="entry-content-wrapper no-flex feature-text">
+            <h1 t="comingSoon.header"></h1>
+            <header t="comingSoon.subheader"></header>
+            <ul role="list" class="feature-list">
+              <li data-icon="🔧">
+                <p t="comingSoon.content.first"></p>
+              </li>
+              <li data-icon="👤">
+                <p><span class="pacifico">gradebooklet</span><span t="comingSoon.content.second"></span></p>
+              </li>
+              <li data-icon="☁️">
+                <p t="comingSoon.content.third"></p>
+              </li>
+            </ul>
+            <p>
+              <span t="comingSoon.footer"></span><span class="pacifico">gradebooklet</span><span
+                    t="comingSoon.footerSecondPart"></span>
+            </p>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="contact">
+            <p><a t="footer.terms" click.trigger="openModal('terms')"></a> | <a t="footer.privacy"  click.trigger="openModal('privacy')">Privacy</a></p>
+          </div>
+
+          <div class="languages">
+            <p>
+              <a click.trigger="changeLang('de')">de</a> | <a click.trigger="changeLang('it')">it</a> | <a
+                    click.trigger="changeLang('fr')">fr</a> | <a click.trigger="changeLang('en')">en</a>
+            </p>
+          </div>
+
+          <div class="copyright">
+            <span>©2020-2021<span class="badge">gradebooklet</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</template>

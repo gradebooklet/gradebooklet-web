@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "features": "Caratteristiche",
+    "download": "Scaricare",
+    "comingSoon": "In arrivo!"
+  },
+  "comingSoon": {
+    "footer": "Scaricare",
+    "footerSecondPart": " ora e godetevi queste nuove caratteristiche presto!",
+    "header": "Ne arriveranno altri!",
+    "subheader": "Rilasciato con l'aggiornamento dell'estate 2021",
+    "content": {
+      "first": "Modifica i controlli salvati in precedenza.",
+      "second": " Conti.",
+      "third": "Supporto multi-dispositivo con archiviazione cloud."
+    }
+  },
+  "download": {
+    "entry": "Questo è",
+    "subheader": "un'app di gestione dei voti semplice e facile da usare."
+  },
+  "features": {
+    "first": {
+      "first": "Deposito di note protette.",
+      "header": "Funzioni multiple:",
+      "second": "Media calcolata per ogni soggetto.",
+      "third": "Eseguire meglio. Con",
+      "thirdSecondPart": " sostenerti!"
+    },
+    "second": {
+      "first": "Facile da usare.",
+      "header": "Design semplice",
+      "second": "Darkmode. Riflette il dispositivo.",
+      "third": "Minimalista. Meno è più."
+    },
+    "third": {
+      "first": "Esportazione come PDF.",
+      "header": "Parametri provati",
+      "second": "Diverse lingue.",
+      "third": "I dati sono memorizzati in forma criptata."
+    }
+  },
+  "footer": {
+    "privacy": "Protezione dei dati",
+    "terms": "Termini & condizioni"
+  }
+}

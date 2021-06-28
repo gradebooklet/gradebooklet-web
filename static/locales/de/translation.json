@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "download": "Herunterladen",
+    "comingSoon": "Erscheint bald!"
+  },
+  "comingSoon": {
+    "footer": "Installieren Sie ",
+    "footerSecondPart": " jetzt und genießen Sie bald diese neuen Funktionen!",
+    "header": "Es kommt noch mehr!",
+    "subheader": "Folgendes erscheint mit dem Sommer 2021 Update",
+    "content": {
+      "first": "Noten der bereits gespeicherten Prüfungen ändern.",
+      "second": " Konten.",
+      "third": "Unterstützung für mehrere Geräte mit Cloud-Speicher."
+    }
+  },
+  "download": {
+    "entry": "Das ist",
+    "subheader": "eine einfache, leicht zu bedienende App zur Notenverwaltung."
+  },
+  "features": {
+    "first": {
+      "first": "Gesicherte Notenspeicherung.",
+      "header": "Vielfältige Funktionen:",
+      "second": "Berechneter Durchschnitt für jedes Fach.",
+      "third": "Bessere Leistung. Mit",
+      "thirdSecondPart": " dass Sie unterstützt!"
+    },
+    "second": {
+      "first": "Leicht zu bedienen.",
+      "header": "Einfaches Design",
+      "second": "Nachtmodus. Reflektiert Gerät.",
+      "third": "Minimalistisch. Weniger bietet mehr."
+    },
+    "third": {
+      "first": "Als PDF exportieren.",
+      "header": "Bewährte Einstellungen",
+      "second": "Verschiedene Sprachen.",
+      "third": "Daten werden verschlüsselt gespeichert."
+    }
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen & Konditionen"
+  }
+}

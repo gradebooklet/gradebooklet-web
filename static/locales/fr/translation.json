@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "features": "Caractéristiques",
+    "download": "Télécharger",
+    "comingSoon": "En approche !"
+  },
+  "comingSoon": {
+    "footer": "Télécharger",
+    "footerSecondPart": " maintenant et profitez bientôt de ces nouvelles fonctionnalités !",
+    "header": "Il y en aura d'autres!",
+    "subheader": "Diffusé avec la mise à jour de l'été 2021",
+    "content": {
+      "first": "Modifier des contrôles déjà enregistrés.",
+      "second": " Comptes.",
+      "third": "Prise en charge de plusieurs appareils avec stockage dans le Cloud."
+    }
+  },
+  "download": {
+    "entry": "C'est",
+    "subheader": "une application de gestion des notes simple et facile à utiliser."
+  },
+  "features": {
+    "first": {
+      "first": "Archivage des notes protégées.",
+      "header": "De multiples fonctions:",
+      "second": "Moyenne calculée pour chaque sujet.",
+      "third": "Soyez plus performant. Avec",
+      "thirdSecondPart": " vous soutenir!"
+    },
+    "second": {
+      "first": "Facile à utiliser.",
+      "header": "Conception simple",
+      "second": "Darkmode. Reflète le dispositif.",
+      "third": "Minimaliste. Moins offre plus."
+    },
+    "third": {
+      "first": "Exporter en PDF.",
+      "header": "Paramètres éprouvés",
+      "second": "Différentes langues.",
+      "third": "Les données sont stockées sous forme cryptée."
+    }
+  },
+  "footer": {
+    "privacy": "Protection des données",
+    "terms": "Modalités & Conditions"
+  }
+}
