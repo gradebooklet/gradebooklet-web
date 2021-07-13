@@ -410,41 +410,6 @@ a {
   text-decoration: none;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 5;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(255, 255, 255, 0.45);
-
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-wrapper {
-  border-radius: 20px;
-  background-color: #ffffff;
-  padding: 20px 40px;
-}
-
-.modal-header {
-  display: flex;
-  width: 100%;
-  height: min-content;
-  justify-content: space-between;
-}
-
-.modal-content {
-  overflow-y: auto;
-  flex-grow: 1;
-  height: 800px;
-  width: 1200px;
-}
-
 .modal-content::-webkit-scrollbar-track,
 .modal-content::-webkit-scrollbar {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -467,7 +432,6 @@ a {
   height: min-content;
 }
 
-
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .modal {
     -webkit-backdrop-filter: blur(4px);
@@ -481,6 +445,45 @@ a {
 @media screen and (min-width: 801px) {
   .hamburger {
     display: none !important;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.45);
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-wrapper {
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px 40px;
+  }
+
+  .modal-header {
+    display: flex;
+    width: 100%;
+    height: min-content;
+    justify-content: space-between;
+  }
+
+  .modal-content {
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 800px;
+    width: 1200px;
+  }
+
+  .feature-content {
+    padding-top: 0;
   }
 }
 
@@ -528,7 +531,6 @@ a {
 
   .preview {
     width: 180px;
-    padding-top: 50px;
   }
 
   .mr {
@@ -596,10 +598,61 @@ a {
   .footer > div {
     margin: 0 !important;
   }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .modal-wrapper {
+    padding: 20px 40px;
+  }
+
+  .modal-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .modal-content {
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+
+  .feature-content {
+    padding-top: 40px;
+  }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   .swiper-content {
     transform: scale(0.85);
+  }
+
+  .swiper-features {
+    padding-top: 0;
+  }
+
+  .content-right {
+    margin-top: -50px;
+  }
+
+  .feature-text {
+    padding: 0;
+  }
+
+  .feature-content {
+    padding-top: 0;
   }
 }
