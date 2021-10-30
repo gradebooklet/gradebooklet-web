@@ -143,7 +143,7 @@ section {
   font-family: 'Ruda', sans-serif;
 }
 
-.footer>div {
+.footer > div {
   min-height: 35px;
   display: flex;
   align-items: center;
@@ -222,7 +222,7 @@ h1 {
   align-content: center;
 }
 
-.download-button>a {
+.download-button > a {
   font-family: 'Ruda', sans-serif;
   display: flex;
   align-items: center;
@@ -241,11 +241,11 @@ a {
   width: 350px;
 }
 
-.download-button>a>svg:before {
+.download-button > a > svg:before {
   margin-right: 7px;
 }
 
-.download-button>a>svg:before {
+.download-button > a > svg:before {
   font-size: 1rem;
 }
 
@@ -336,8 +336,8 @@ a {
   }
 }
 
-@-webkit-keyframes arrow
 /*Safari and Chrome*/
+@-webkit-keyframes arrow
 
   {
   0% {
@@ -389,7 +389,7 @@ ul.feature-list li::before {
   padding: 0 !important;
 }
 
-.feature-text>header {
+.feature-text > header {
   text-align: left;
 }
 
@@ -518,7 +518,7 @@ a {
   .mr {
     margin-right: 0;
   }
-  .mr>.preview {
+  .mr > .preview {
     width: 160px;
   }
   .fab {
@@ -533,7 +533,7 @@ a {
     font-size: 1rem;
     padding: 0 50px;
   }
-  .feature-text>h1 {
+  .feature-text > h1 {
     font-size: 1.4rem;
   }
   .entry-content-wrapper {
@@ -564,7 +564,7 @@ a {
   .footer {
     flex-direction: column;
   }
-  .footer>div {
+  .footer > div {
     margin: 0 !important;
   }
   .modal {
