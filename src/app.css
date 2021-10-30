@@ -8,8 +8,7 @@
   --primary-stroke: rgb(74, 59, 59);
 }
 
-html,
-body {
+html, body {
   position: relative;
   height: 100%;
   background-color: var(--tertiary-content);
@@ -64,7 +63,6 @@ p {
 .swiper-content {
   text-align: center;
   font-size: 18px;
-
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,7 +77,6 @@ p {
   -webkit-align-items: center;
   align-items: center;
   flex: 1;
-
   color: #ffffff;
   font-family: 'Ruda', sans-serif;
 }
@@ -115,7 +112,7 @@ nav {
   align-items: center;
 }
 
-.main-nav:hover ~ .indicator {
+.main-nav:hover~.indicator {
   transform: scaleX(1);
 }
 
@@ -198,10 +195,8 @@ section {
   font-family: 'Ruda', sans-serif;
   font-weight: bold;
   color: #000000;
-
   border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-  -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
   cursor: pointer;
 }
 
@@ -337,7 +332,6 @@ a {
   height: 40px;
 }
 
-
 /* Scroll down arrows */
 
 @keyframes arrow {
@@ -355,8 +349,10 @@ a {
   }
 }
 
-@-webkit-keyframes arrow /*Safari and Chrome*/
-{
+/*Safari and Chrome*/
+@-webkit-keyframes arrow
+
+  {
   0% {
     opacity: 0;
   }
@@ -423,6 +419,7 @@ a {
   text-decoration: none;
 }
 
+
 /* Standard property box-shadow to prevent compatibility issue */
 .modal-content::-webkit-scrollbar-track,
 .modal-content::-webkit-scrollbar {
@@ -461,7 +458,6 @@ a {
   .hamburger {
     display: none !important;
   }
-
   .modal {
     display: none;
     position: fixed;
@@ -472,31 +468,26 @@ a {
     height: 100%;
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.45);
-
     align-items: center;
     justify-content: center;
   }
-
   .modal-wrapper {
     border-radius: 20px;
     background-color: #ffffff;
     padding: 20px 40px;
   }
-
   .modal-header {
     display: flex;
     width: 100%;
     height: min-content;
     justify-content: space-between;
   }
-
   .modal-content {
     overflow-y: auto;
     flex-grow: 1;
     height: 800px;
     width: 1200px;
   }
-
   .feature-content {
     padding-top: 0;
   }
@@ -508,7 +499,6 @@ a {
   .logo {
     height: 45px;
   }
-
   .nav-item {
     padding: 0 20px 0 20px;
     width: 100%;
@@ -517,22 +507,18 @@ a {
     justify-content: center;
     align-items: center;
   }
-
   .nav-item:hover {
     background-color: var(--secondary-content);
   }
-
   .indicator {
     display: none;
   }
-
   nav {
     background-color: var(--tertiary-content);
     display: flex;
     padding: 15px 20px 15px 20px;
     box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.2);
   }
-
   .main-nav {
     position: fixed;
     top: 75px;
@@ -543,77 +529,61 @@ a {
     z-index: 2;
     width: 100%;
   }
-
   .preview {
     width: 180px;
   }
-
   .mr {
     margin-right: 0;
   }
-
   .mr > .preview {
     width: 160px;
   }
-
   .fab {
     font-size: 0.6rem;
   }
-
   .main-badge {
     font-family: 'Pacifico', sans-serif;
     font-size: 1.2rem;
     display: block;
   }
-
   .feature-text {
     font-size: 1rem;
     padding: 0 50px;
   }
-
   .feature-text > h1 {
     font-size: 1.4rem;
   }
-
   .entry-content-wrapper {
     display: flex;
     flex-direction: column-reverse;
   }
-
   .swiper-content {
     display: flex;
     flex-direction: column;
   }
-
   .arrows {
     display: none;
   }
-
   .swiper-arrows {
     position: absolute;
     width: 100%;
     bottom: 50px;
     z-index: 2;
   }
-
   .feature-swiper-pagination {
     position: absolute;
     bottom: 14px !important;
   }
-
   .feature-swiper {
     height: 100%;
     position: relative;
   }
-
   .footer {
     flex-direction: column;
   }
-
   .footer > div {
     margin: 0 !important;
   }
-
   .modal {
     display: none;
     position: fixed;
@@ -622,29 +592,22 @@ a {
     top: 0;
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.7);
-
     justify-content: center;
-
     height: 100%;
     width: 100%;
   }
-
-
   .modal-wrapper {
     padding: 20px 40px;
   }
-
   .modal-header {
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
-
   .modal-content {
     overflow-y: auto;
     flex-grow: 1;
   }
-
   .feature-content {
     padding-top: 40px;
   }
@@ -654,19 +617,15 @@ a {
   .swiper-content {
     transform: scale(0.85);
   }
-
   .swiper-features {
     padding-top: 0;
   }
-
   .content-right {
     margin-top: -50px;
   }
-
   .feature-text {
     padding: 0;
   }
-
   .feature-content {
     padding-top: 0;
   }
