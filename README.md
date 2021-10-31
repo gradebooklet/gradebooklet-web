@@ -18,9 +18,12 @@ To change dev server port, do `npm start -- --port 8888`.
 
 To change dev server host, do `npm start -- --host 127.0.0.1`
 
-**PS:** You could mix all the flags as well, `npm start -- --host 127.0.0.1 --port 7070 --open --hmr`
+For long time aurelia-cli user, you can still use `au run` with those arguments like `au run --env prod --open --hmr`.  
+But `au run` now simply executes `npm start` command.
 
-For long time aurelia-cli user, you can still use `au run` with those arguments like `au run --env prod --open --hmr`. But `au run` now simply executes `npm start` command.
+**PS:** You could mix all the flags as well, `npm start -- --host 127.0.0.1 --port 7070 --open --hmr`  
+## Recommended for Windows  
+To run dev with port and hot module reload, do `npm start -- --port 4000 --open --hmr`
 
 ## Build for production
 
